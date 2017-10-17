@@ -19,7 +19,7 @@
   <properties>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
-    <aws.api.version>1.10.69</aws.api.version>
+    <aws.api.version>1.11.213</aws.api.version>
     <encoding>UTF-8</encoding>
   </properties>
 
