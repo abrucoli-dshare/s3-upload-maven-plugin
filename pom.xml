@@ -1,54 +1,30 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <parent>
-    <groupId>com.bazaarvoice.commons</groupId>
-    <artifactId>bv-opensource-super-pom</artifactId>
-    <version>1.4</version>
-  </parent>
-
-  <groupId>com.bazaarvoice.maven.plugins</groupId>
+  <groupId>com.github.nikodem911.com.bazaarvoice.maven.plugins</groupId>
   <artifactId>s3-upload-maven-plugin</artifactId>
   <version>1.5-SNAPSHOT</version>
   <packaging>maven-plugin</packaging>
 
   <name>S3 upload maven plugin</name>
+  <description>This is a fork of bazaarvoice/s3-upload-maven-plugin. It adds support for S3 connection via proxy.</description>
 
   <scm>
-    <url>https://github.com/bazaarvoice/s3-upload-maven-plugin</url>
-    <connection>scm:git:git@github.com:bazaarvoice/s3-upload-maven-plugin.git</connection>
-    <developerConnection>scm:git:git@github.com:bazaarvoice/s3-upload-maven-plugin.git</developerConnection>
+    <url>https://github.com/nikodem911/s3-upload-maven-plugin</url>
+    <connection>scm:git:git@github.com:nikodem911/s3-upload-maven-plugin.git</connection>
+    <developerConnection>scm:git:git@github.com:nikodem911/s3-upload-maven-plugin.git</developerConnection>
     <tag>HEAD</tag>
   </scm>
 
   <properties>
-    <maven.compiler.source>1.6</maven.compiler.source>
-    <maven.compiler.target>1.6</maven.compiler.target>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+    <aws.api.version>1.10.69</aws.api.version>
     <encoding>UTF-8</encoding>
   </properties>
 
   <build>
     <plugins>
-      <plugin>
-        <groupId>org.codehaus.mojo</groupId>
-        <artifactId>animal-sniffer-maven-plugin</artifactId>
-        <version>1.15</version>
-        <configuration>
-          <signature>
-            <groupId>org.codehaus.mojo.signature</groupId>
-            <artifactId>java16</artifactId>
-            <version>1.1</version>
-          </signature>
-        </configuration>
-        <executions>
-          <execution>
-            <phase>test</phase>
-            <goals>
-              <goal>check</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-plugin-plugin</artifactId>
@@ -102,18 +78,18 @@
     <dependency>
       <groupId>com.amazonaws</groupId>
       <artifactId>aws-java-sdk-core</artifactId>
-      <version>1.10.69</version>
+      <version>${aws.api.version}</version>
     </dependency>
     <dependency>
       <groupId>com.amazonaws</groupId>
       <artifactId>aws-java-sdk-s3</artifactId>
-      <version>1.10.69</version>
+      <version>${aws.api.version}</version>
     </dependency>
     <dependency>
       <!-- The STS SDK is necessary if role based profiles are used for credentials. -->
       <groupId>com.amazonaws</groupId>
       <artifactId>aws-java-sdk-sts</artifactId>
-      <version>1.10.69</version>
+      <version>${aws.api.version}</version>
     </dependency>
   </dependencies>
 </project>
