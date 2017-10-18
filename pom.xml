@@ -3,7 +3,7 @@
 
     <groupId>com.github.nikodem911</groupId>
     <artifactId>s3-upload-maven-plugin</artifactId>
-    <version>1.5.1</version>
+    <version>1.5.2-SNAPSHOT</version>
     <packaging>maven-plugin</packaging>
 
     <name>S3 upload maven plugin</name>
@@ -29,7 +29,7 @@
         <url>https://github.com/nikodem911/s3-upload-maven-plugin</url>
         <connection>scm:git:git@github.com:nikodem911/s3-upload-maven-plugin.git</connection>
         <developerConnection>scm:git:git@github.com:nikodem911/s3-upload-maven-plugin.git</developerConnection>
-        <tag>s3-upload-maven-plugin-1.5.1</tag>
+        <tag>HEAD</tag>
     </scm>
 
     <properties>
